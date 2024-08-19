@@ -1,4 +1,6 @@
 
+import 'dart:io';
+
 void main(List<String> arguments) {
 //! Operator
   // Toán tử là các ký hiệu dùng để tính toán, logic, gán, v.v được sử dụng nhiều trong việc lập trình
@@ -272,4 +274,34 @@ void main(List<String> arguments) {
   } finally {
     print('This is always executed');
   }
+
+  //? throw để tạo ra (hoặc ném) một ngoại lệ (exception)
+  // khi bạn muốn chủ động báo hiệu rằng một lỗi đã xảy ra (do bạn định nghĩa điều kiện)
+  // trong chương trình của bạn
+
+  void checkAge(int age) {
+    if (age < 18) {
+      throw Exception('You must be at least 18 years old.');
+    } else {
+      print('You are eligible.');
+    }
+  }
+
+  try {
+    checkAge(19); // Gọi hàm với giá trị không hợp lệ
+  } catch (e) {
+    print('Caught an exception: $e'); // Bắt và xử lý ngoại lệ
+  }
+
+  // //! Dart input
+  // Để thực hiện nhận giá trị mà người dùng nhập từ bàn phím, sử dụng hàm readLineSync
+  print("Enter your name:");
+  // Đọc giá trị của name
+  String? inputedName = stdin.readLineSync();
+  print("Enter your Student Id:");
+  int? studentId = int.tryParse(stdin.readLineSync() ?? '');
+  // In ra giá trị của name và studentId
+  print("Hello, $inputedName\nYour student ID: $studentId");
+  // Để có thể nhập từ bàn phím thì cần phải chạy dart application trên terminal
+  // bằng câu lệnh: dart run path-to-dart-file
 }
