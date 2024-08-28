@@ -2,9 +2,9 @@ import "dart:io";
 void main(List<String> args){
 
   //! Null safety
-  // Null Safety đảm bảo rằng các biến không thể giữ giá trị null
-  // trừ khi bạn cho phép chúng làm như vậy một cách rõ ràng
-  // giúp tăng độ an toàn và giảm bớt các lỗi liên quan đến null khi chạy chương trình.
+  //  Null Safety đảm bảo rằng các biến không thể giữ giá trị null
+  //  trừ khi bạn cho phép chúng làm như vậy một cách rõ ràng
+  //  giúp tăng độ an toàn và giảm bớt các lỗi liên quan đến null khi chạy chương trình.
 
   //! Non-nullable types (Kiểu không cho phép null)
   // Mặc định, các biến trong Dart không thể chứa giá trị null.
